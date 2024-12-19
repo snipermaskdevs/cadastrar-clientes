@@ -1,0 +1,197 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.actions button,
+.actions input {
+    margin: 0;
+    flex: 1;
+    max-width: 48%;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #444;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+ul li:nth-child(odd) {
+    background: #f1f1f1;
+}
+
+/* Atualizando o estilo para eliminar a cor vermelha */
+.error {
+    color: black;
+}
+
+button.delete-btn {
+    background-color: #ff6347;
+}
+
+button.delete-btn:hover {
+    background-color: #d9534f;
+}
+
+/* Estilo para o aviso */
+.notice {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para o aviso externo */
+.notices {
+    background-color: #fff3cd; /* Cor de fundo amarela suave */
+    color: #856404; /* Cor do texto marrom escuro */
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 10px; /* Sem borda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionando sombra para destacar */
+}
+
+/* Remove margem do parágrafo dentro da notice */
+.notice p, .notices p {
+    margin: 0;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form input,
+    form select,
+    button {
+        font-size: 14px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .actions button,
+    .actions input {
+        max-width: 100%;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    form input,
+    form select {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .actions button,
+    .actions input {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    ul li {
+        font-size: 13px;
+    }
+}

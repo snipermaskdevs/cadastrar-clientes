@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Clientes</h1>
+    
+    <!-- Aviso de observação -->
+    <div class="notice">
+      <p><strong>Aviso:</strong> Preencha todos os campos corretamente para garantir que os dados do cliente sejam cadastrados corretamente.</p>
+    </div>
+
+        <!-- Aviso de observação -->
+        <div class="notice" id="notice">
+            <p><strong>Observação:</strong> Em caso de perda de dados, não conseguirei enviá-los. Tente antes clicar em "Exportar Dados" e depois use o "Escolher ficheiro".</p>
+          </div>
+
+    <form id="client-form">
+      <input type="text" id="name" placeholder="Nome do Cliente" required>
+      <input type="text" id="cpf" placeholder="CPF" required>
+      <input type="tel" id="phone" placeholder="Telefone" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="address" placeholder="Endereço" required>
+      <input type="text" id="cidade" placeholder="Cidade" required>
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione o estado</option>
+        <!-- Lista de opções de estados -->
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AM">Amazonas</option>
+        <option value="AP">Amapá</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="EX">Estrangeiro</option>
+      </select>
+      <input type="text" id="codigopostal" placeholder="Código Postal" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <div class="actions">
+      <button id="export-btn">Exportar Dados</button>
+      <input type="file" id="import-file" accept=".json">
+    </div>
+
+    <h2>Lista de Clientes</h2>
+    <ul id="client-list"></ul>
+  </div>
+      
+  <script src="script.js"></script>
+</body>
+</html>
